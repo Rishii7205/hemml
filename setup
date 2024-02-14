@@ -6,12 +6,12 @@ _hellbot_zip () {
     then
         echo "https://github.com/${PLUGINS_REPO}/archive/master.zip"
     else
-        echo "https://github.com/The-HellBot/Plugins/archive/master.zip"
+        echo "https://github.com/RISHII7205/Plugins/archive/master.zip"
     fi
 }
 
 _starter () {
-    echo "••• Downloading HellBot [v3] •••"
+    echo "••• Downloading UserBot [v3] •••"
     hellpath="Plugins.zip"
 
     wget -q $(_hellbot_zip) -O "$hellpath"
@@ -21,7 +21,7 @@ _starter () {
     cd $HELLPATH
     python3 ../updater.py ../requirements.txt requirements.txt
 
-    echo "••• Starting HellBot [v3] •••"
+    echo "••• Starting UserBot [v3] •••"
     chmod 777 start.sh
     ./start.sh
 }
